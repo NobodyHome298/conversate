@@ -25,6 +25,16 @@
     "appId": "app.donotknock.conversate",
     "mac": {
       "icon": "resources/Conversate.icns"
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "resources/Conversate.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
     }
   },
   "dependencies": {

@@ -33,4 +33,16 @@ mac:
   notarize: false
 dmg:
   artifactName: ${productName}-${version}-${arch}.${ext}
+win:
+  icon: resources/Conversate.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
 npmRebuild: false
+

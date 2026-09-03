@@ -8,10 +8,12 @@ import icon from '../../resources/icon.png?asset'
 import { ConversateServer, AppApiKeys, SummaryPayload } from './ws-server'
 
 // Initialize macOS audio loopback capture handler before app.whenReady
-try {
-  initMain()
-} catch (e) {
-  console.warn('[Conversate Main] electron-audio-loopback initMain failed or already initialized:', e)
+if (process.platform === 'darwin') {
+  try {
+    initMain()
+  } catch (e) {
+    console.warn('[Conversate Main] electron-audio-loopback initMain failed or already initialized:', e)
+  }
 }
 
 // Persistent configuration storage in userData/config.json
@@ -70,7 +72,7 @@ function createWindow(): BrowserWindow {
     show: false,
     title: 'Conversate - Real-Time Transcription',
     autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+    ...(process.platform !== 'darwin' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
@@ -120,11 +122,13 @@ function formatFriendlyError(err: any): string {
 app.whenReady().then(() => {
   electronApp.setAppUserModelId('app.donotknock.conversate')
 
-  app.setAboutPanelOptions({
-    applicationName: 'Conversate',
-    applicationVersion: 'v1.0.0',
-    copyright: 'donotknock.app'
-  })
+  if (process.platform === 'darwin') {
+    app.setAboutPanelOptions({
+      applicationName: 'Conversate',
+      applicationVersion: 'v1.0.0',
+      copyright: 'donotknock.app'
+    })
+  }
 
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
