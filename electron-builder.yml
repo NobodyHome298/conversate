@@ -1,0 +1,36 @@
+appId: app.donotknock.conversate
+productName: Conversate
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+mac:
+  icon: resources/Conversate.icns
+  target:
+    - target: dmg
+      arch:
+        - arm64
+        - x64
+    - target: zip
+      arch:
+        - arm64
+        - x64
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    NSMicrophoneUsageDescription: "Conversate requires microphone access to transcribe your speech."
+    NSAudioCaptureUsageDescription: "Conversate requires system audio access to transcribe meetings and videos."
+    NSScreenCaptureDescription: "Conversate requires screen access to capture system audio."
+    NSCameraUsageDescription: "Application requests access to the device camera."
+    NSDocumentsFolderUsageDescription: "Application requests access to the user Documents folder to save conversation summaries."
+    NSDownloadsFolderUsageDescription: "Application requests access to the user Downloads folder."
+  notarize: false
+dmg:
+  artifactName: ${productName}-${version}-${arch}.${ext}
+npmRebuild: false

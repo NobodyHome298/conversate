@@ -1,0 +1,81 @@
+:root {
+  --bg-main: #121214;
+  --bg-surface: #1e1e24;
+  --bg-input: #27272a;
+  --border: #3f3f46;
+  --border-subtle: #333333;
+  --text-primary: #ffffff;
+  --text-muted: #d4d4d8;
+
+  /* Aliases mapped to theme variables */
+  --bg-dark: var(--bg-main);
+  --bg-panel: var(--bg-surface);
+  --bg-cues: var(--bg-surface);
+  --bg-card: var(--bg-input);
+  --border-color: var(--border);
+  --text-main: var(--text-primary);
+  --text-subtitle: var(--text-muted);
+
+  --accent-green: #3CFA44;
+  --accent-cyan: #00E5FF;
+  --accent-purple: #B388FF;
+  --accent-amber: #FFD54F;
+  --accent-red: #FF5252;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-input: #f1f5f9;
+    --border: #cbd5e1;
+    --border-subtle: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+
+    --bg-dark: var(--bg-main);
+    --bg-panel: var(--bg-surface);
+    --bg-cues: var(--bg-surface);
+    --bg-card: var(--bg-input);
+    --border-color: var(--border);
+    --text-main: var(--text-primary);
+    --text-subtitle: var(--text-muted);
+  }
+}
+
+/* Explicit data-theme overrides if forced */
+html[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-input: #f1f5f9;
+  --border: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+
+  --bg-dark: var(--bg-main);
+  --bg-panel: var(--bg-surface);
+  --bg-cues: var(--bg-surface);
+  --bg-card: var(--bg-input);
+  --border-color: var(--border);
+  --text-main: var(--text-primary);
+  --text-subtitle: var(--text-muted);
+}
+
+html[data-theme="dark"] {
+  --bg-main: #121214;
+  --bg-surface: #1e1e24;
+  --bg-input: #27272a;
+  --border: #3f3f46;
+  --border-subtle: #333333;
+  --text-primary: #ffffff;
+  --text-muted: #d4d4d8;
+
+  --bg-dark: var(--bg-main);
+  --bg-panel: var(--bg-surface);
+  --bg-cues: var(--bg-surface);
+  --bg-card: var(--bg-input);
+  --border-color: var(--border);
+  --text-main: var(--text-primary);
+  --text-subtitle: var(--text-muted);
+}
