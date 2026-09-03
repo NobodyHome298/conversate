@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="resources/Conversate.png" width="128" alt="Conversate Logo">
+</p>
+
 # Conversate
 
 *Live Speech Intelligence & Proactive Context for macOS*
