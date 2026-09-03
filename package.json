@@ -1,6 +1,6 @@
 {
   "name": "conversate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Live transcription and proactive AI Cues for Even Realities G2",
   "main": "./out/main/index.js",
   "author": "Muhammad Nur Shafiq bin Abdul Shukor",

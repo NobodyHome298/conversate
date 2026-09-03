@@ -4,20 +4,20 @@
 
 # Conversate
 
-*Live Speech Intelligence & Proactive Context for macOS*
+*Live Speech Intelligence & Proactive Context for macOS & Windows*
 
 ## Overview
 
-Conversate is a native macOS utility designed to act as your real-time conversational co-pilot. Whether you are in a remote meeting, conducting an interview, or listening to a live stream, Conversate captures dual-channel audio (your microphone and the system's internal loopback) to generate a live, speaker-diarized transcript. Beyond simple speech-to-text, it leverages a sliding window of context to feed proactive visual cues to your screen and compiles highly structured, grammatically polished summaries the moment your session ends.
+Conversate is a cross-platform desktop utility designed to act as your real-time conversational co-pilot. Whether you are in a remote meeting, conducting an interview, or listening to a live stream, Conversate captures dual-channel audio (your microphone and the system's internal loopback) to generate a live, speaker-diarized transcript. Beyond simple speech-to-text, it leverages a sliding window of context to feed proactive visual cues to your screen and compiles highly structured, grammatically polished summaries the moment your session ends.
 
 ## The End Product: Key Features
 
-* 🎙️ **Native Dual Audio Capture:** Seamlessly routes local microphone input and macOS system loopback simultaneously, with zero third-party virtual audio cables required.
+* 🎙️ **Native Dual Audio Capture:** Seamlessly routes local microphone input and system audio loopback simultaneously, with zero third-party virtual audio cables required.
 * ⚡ **Live Speaker Diarization:** Lightning-fast, real-time speech-to-text with automatic speaker detection, powered by a persistent Deepgram WebSocket connection.
 * 🧠 **Proactive Context Cues:** A background engine analyzes the rolling transcript every few seconds, surfacing relevant concepts, entity bios, or quick answers on the fly without user prompting.
 * 🌐 **Universal AI Support:** Provider-agnostic LLM architecture. Connect to Google Gemini, or switch to any OpenAI-compatible endpoint (Groq, OpenRouter, or local models via LM Studio/Ollama) using built-in presets.
 * 📝 **Intelligent Logging & Export:** Raw, unpunctuated speech is automatically processed into properly capitalized, formatted prose. Sessions are saved locally as Markdown logs with one-click PDF export.
-* 🌗 **Polished macOS UI:** Built with Electron and Vite, featuring dynamic layout modules, a non-intrusive notification drawer, and native Light/Dark mode integration.
+* 🌗 **Polished Native UI:** Built with Electron and Vite, featuring dynamic layout modules, a non-intrusive notification drawer, and native Light/Dark mode integration.
 
 ## Development History
 
@@ -66,10 +66,11 @@ You only need **one** of the following LLM providers. Groq is highly recommended
 
 ### Installation
 1. Navigate to the [Releases](https://github.com/NobodyHome298/conversate/releases) page on GitHub.
-2. Download the latest macOS `.dmg` file.
-3. Open the downloaded file and drag **Conversate** into your Applications folder.
+2. **For macOS:** Download the latest `.dmg` file. Open the file and drag **Conversate** into your Applications folder.
+3. **For Windows:** Download the latest `.exe` setup file and run the installer.
 4. Launch the app and configure your API keys in the Settings menu to begin capturing.
 
 ## Data Privacy
 
-Conversate operates entirely on your local machine. Audio is streamed directly to Deepgram for transcription, and context is routed exclusively to your configured AI provider. No conversation data, logs, or API keys are stored on external servers or databases outside of your local macOS `~/Documents/Conversate` directory.
+Conversate operates entirely on your local machine. Audio is streamed directly to Deepgram for transcription, and context is routed exclusively to your configured AI provider. No conversation data, logs, or API keys are stored on external servers or databases outside of your local Documents/Conversate directory.
+

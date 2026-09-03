@@ -125,7 +125,7 @@ app.whenReady().then(() => {
   if (process.platform === 'darwin') {
     app.setAboutPanelOptions({
       applicationName: 'Conversate',
-      applicationVersion: 'v1.0.0',
+      applicationVersion: 'v1.1.0',
       copyright: 'donotknock.app'
     })
   }
