@@ -36,6 +36,34 @@ To run Conversate locally, you will need to configure your own API keys on first
 1. **Deepgram API Key:** Required for live speech-to-text WebSocket streaming.
 2. **LLM Provider Key:** A Google Gemini API key, a Groq API key, or any OpenAI-compatible base URL/Key combo for proactive cues and summaries.
 
+### 🔑 How to Get Your API Keys
+
+Conversate requires you to provide your own API keys. All keys are stored securely and exclusively on your local machine. 
+
+#### 1. Deepgram (Required for Live Audio Transcription)
+Deepgram handles the real-time speech-to-text and multi-speaker diarization.
+* Go to the [Deepgram Console](https://console.deepgram.com/) and create a free account (includes starting credits).
+* Navigate to **API Keys** on the left sidebar.
+* Click **Create a New API Key**, name it "Conversate", and copy the generated key.
+
+#### 2. AI Provider (Required for Proactive Cues & Summaries)
+You only need **one** of the following LLM providers. Groq is highly recommended for its zero-latency open-weight models, which are ideal for real-time proactive cues.
+
+* **Groq (Recommended - Lightning Fast)**
+  * Go to the [GroqCloud Console](https://console.groq.com/keys).
+  * Sign in and click **Create API Key**.
+  * In Conversate, select the **Groq** preset and paste your key.
+
+* **Google Gemini (Alternative)**
+  * Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
+  * Click **Create API Key** and generate one for a new or existing project.
+  * In Conversate, select the **Google Gemini** preset and paste your key.
+
+* **OpenRouter (Alternative)**
+  * Go to [OpenRouter Keys](https://openrouter.ai/keys).
+  * Click **Create Key**. 
+  * In Conversate, select the **OpenRouter** preset and paste your key.
+
 ### Installation
 1. Navigate to the [Releases](https://github.com/NobodyHome298/conversate/releases) page on GitHub.
 2. Download the latest macOS `.dmg` file.
